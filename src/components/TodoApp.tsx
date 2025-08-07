@@ -6,7 +6,7 @@ var defaults = {
   origin: { y: 0.7 },
 };
 
-function fire(particleRatio, opts) {
+function fire(particleRatio: number, opts: any) {
   confetti({
     ...defaults,
     ...opts,
@@ -23,7 +23,7 @@ interface Todo {
 function Todo() {
   const [todos, setTodos] = useState<Todo[]>([]);
   const [input, setInput] = useState("");
-  const [quote, setQuote] = useState(getRandomQuote());
+  const [quote, setQuote] = useState(getRandomQuote(""));
 
   function getRandomQuote(prevQuote: string): string {
     const quotes = [
